@@ -20,20 +20,20 @@ RUN		apt-get update \
 			libxslt1-dev \
 			libcurl4-openssl-dev \
 			python-software-properties \
-			libffi-dev \
+			libffi-dev
 
 # Install NodeJS
-		&& curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash - \
-		&& sudo apt-get install -y nodejs \
+RUN		curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash - \
+		&& sudo apt-get install -y nodejs
 
 # Install rbenv
-		&& cd \
+RUN		cd \
 		&& git clone https://github.com/rbenv/rbenv.git ~/.rbenv \
 		&& echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bashrc \
 		&& echo 'eval "$(rbenv init -)"' >> ~/.bashrc \
-		&& exec $SHELL \
+		&& exec $SHELL
 
-		&& git clone https://github.com/rbenv/ruby-build.git ~/.rbenv/plugins/ruby-build \
+RUN		git clone https://github.com/rbenv/ruby-build.git ~/.rbenv/plugins/ruby-build \
 		&& echo 'export PATH="$HOME/.rbenv/plugins/ruby-build/bin:$PATH"' >> ~/.bashrc \
 		&& exec $SHELL \
 
