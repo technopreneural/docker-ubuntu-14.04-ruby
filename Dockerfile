@@ -37,9 +37,9 @@ RUN		git clone https://github.com/rbenv/ruby-build.git ~/.rbenv/plugins/ruby-bui
 		&& echo 'export PATH="$HOME/.rbenv/plugins/ruby-build/bin:$PATH"' >> ~/.bashrc \
 		&& exec $SHELL
 
-#RUN		&& rbenv install 2.3.1 \
-#		&& rbenv global 2.3.1 \
-#		&& ruby -v \
+RUN		&& rbenv install 2.3.1 \
+		&& rbenv global 2.3.1 \
+		&& ruby -v \
 
 # Install bundler
-#		&& gem install bundler
+		&& gem install bundler
