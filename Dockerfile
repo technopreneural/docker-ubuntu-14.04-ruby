@@ -33,7 +33,7 @@ RUN		cd \
 		&& echo 'eval "$(rbenv init -)"' >> ~/.bashrc \
 		&& exec $SHELL
 
-#RUN		git clone https://github.com/rbenv/ruby-build.git ~/.rbenv/plugins/ruby-build \
+RUN		git clone https://github.com/rbenv/ruby-build.git ~/.rbenv/plugins/ruby-build
 #		&& echo 'export PATH="$HOME/.rbenv/plugins/ruby-build/bin:$PATH"' >> ~/.bashrc \
 #		&& exec $SHELL
 
